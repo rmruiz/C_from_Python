@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-int square(int i) {
-	int j = 0;
+int cpu_intensive(int i) {
+	double j = 0.0;
 	for(int x=1;x<i;x++){
-		j += 1*2*3*4*5*6*7*8*9*10;
+		j += i;
+		j *= 1.0000001;
+		j /= 1.0000001;
 	}
-	return 8;
+	return j;
 }
 
